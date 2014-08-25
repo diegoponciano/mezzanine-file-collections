@@ -15,7 +15,22 @@ Installation is quite simple.
     $ pip install mezzanine-file-collections
 
 Add "mezzanine_file_collections" to your list of installed apps. Then migrate
-your database. That's it.
+your database. 
+
+Add the desired file types to FILEBROWSER_EXTENSIONS on settings.py. Example:
+
+```
+FILEBROWSER_EXTENSIONS = {
+    'Folder': [''],
+    'Image': ['.jpg','.jpeg','.gif','.png','.tif','.tiff'],
+    'Video': ['.mov','.wmv','.mpeg','.mpg','.avi','.rm'],
+    'Document': ['.pdf','.doc','.rtf','.txt','.xls','.csv'],
+    'Audio': ['.mp3','.mp4','.wav','.aiff','.midi','.m4p', '.ogg'],
+    'Code': ['.html','.py','.js','.css']
+}
+```
+
+That's it.
 
 ## Usage
 
